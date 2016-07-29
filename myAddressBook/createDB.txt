@@ -1,0 +1,13 @@
+创建数据库
+create database myAddressBook default character set utf8 collate utf8_general_ci;
+
+创建主档表
+create table addressinfos (
+	id int(5),
+	name varchar(20),
+	phone varchar(13),
+	mobilephone varchar(11),
+	email varchar(50),
+	PRIMARY KEY (id)
+	);
+	

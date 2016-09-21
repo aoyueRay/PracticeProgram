@@ -1,0 +1,22 @@
+创建数据库
+create database GuessNumber default character set utf8 collate utf8_general_ci;
+
+创建用户信息表
+create table user_infos (
+	id int(5) NOT NULL AUTO_INCREMENT COMMENT 'ID',
+	name varchar(20) NOT NULL COMMENT '用户名',
+	pwd varchar(20) NOT NULL COMMENT '密码',
+	difficulty_easy int(5) COMMENT  '简单-总次数',
+	average_easy float(6,2) COMMENT  '简单-平均猜中次数',
+	difficulty_middle int(5) COMMENT  '一般-总次数',
+	average_middle float(6,2) COMMENT  '一般-平均猜中次数',
+	difficulty_difficult int(5) COMMENT  '困难-总次数',
+	average_difficult float(6,2) COMMENT  '困难-平均猜中次数',
+	total varchar(11) COMMENT '总共玩的次数',
+	PRIMARY KEY (id)
+	);
+
+
+insert into user_infos
+(id,name,pwd,difficulty_easy,average_easy,difficulty_middle,average_middle,
+difficulty_difficult,average_difficult,total) values (1,'Ray','43280',0,0.00,0,0.00,0,0.00,0);
